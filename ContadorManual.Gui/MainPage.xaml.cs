@@ -27,12 +27,5 @@ namespace ContadorManual.Gui
             ConteoManual.Text = _conteo.ToString();
 
         }
-
-        private void Button_Clicked_2(object sender, EventArgs e)
-        {
-            _conteo--;
-
-            ConteoManual.Text = _conteo.ToString();
-        }
     }
 }

@@ -6,45 +6,49 @@
              BackgroundColor="LightGray"
              >
 
-    <VerticalStackLayout  Margin="20">
-        <Label HorizontalOptions="Start" 
-        Text="Conteo:"
-        TextColor="Black" 
-        FontSize="Medium">
-        </Label>
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <VerticalStackLayout Grid.Row="0" Grid.Column="0" >
+            <Label 
+            HorizontalOptions="Start" 
+            Text="Conteo:"
+            TextColor="Black" 
+            FontSize="Medium">
+            </Label>
 
-        <Border Stroke="Gray" Margin="0,24,0,36">
+            <Border Stroke="Gray" Margin="0,24,0,36">
 
-            <Label
-            HorizontalOptions="Center" 
-            Margin="0,24"
-            FontSize="Large" 
-            TextColor="Black"
-            FontAttributes="Bold" 
-            Text="0"
-            x:Name="ConteoManual"
-            />
-        </Border>
-        <HorizontalStackLayout HorizontalOptions="Center" Spacing="32">
+                <Label
+                HorizontalOptions="Center" 
+                Margin="0,24"
+                FontSize="Large" 
+                TextColor="Black"
+                FontAttributes="Bold" 
+                Text="0"
+                x:Name="ConteoManual"
+                />
+            </Border>
 
+
+        </VerticalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" Spacing="32">
             <Button Text="Contar" 
-                WidthRequest="130"
-                FontSize="Medium" 
-                Clicked="Button_Clicked" />
-
-
-            <Button Text="Restar" 
-                WidthRequest="130"
-                FontSize="Medium" 
-                Clicked="Button_Clicked_2" />
+            WidthRequest="130"
+            FontSize="Medium" 
+            Clicked="Button_Clicked" />
 
 
             <Button Text="Reiniciar"
-                WidthRequest="130" 
-                FontSize="Medium"
-                Clicked="Button_Clicked_1" />
+            
+            WidthRequest="130" 
+            FontSize="Medium"
+            Clicked="Button_Clicked_1" />
+
         </HorizontalStackLayout>
 
-    </VerticalStackLayout>
-
+    </Grid>
 </ContentPage>
